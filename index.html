@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+
+        <div id="ui-layer">
+            <div id="score-display">0</div>
+
+            <div id="start-screen" class="screen active">
+                <h1 class="title">Flappy Card</h1>
+                <p class="subtitle">Tap, Click, or Space to Fly</p>
+                <button id="start-btn" class="btn-primary">Start Show</button>
+            </div>
+
+            <div id="game-over-screen" class="screen hidden">
+                <h1 class="title">Curtain Call</h1>
+                <div class="score-card">
+                    <p>Score: <span id="final-score">0</span></p>
+                    <p>Best: <span id="best-score">0</span></p>
+                </div>
+                <button id="restart-btn" class="btn-primary">Replay</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
