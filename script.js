@@ -92,7 +92,6 @@ class Game {
     init() {
         this.resize();
         window.addEventListener('resize', this.resize);
-        window.addEventListener('orientationchange', () => setTimeout(this.resize, 100));
 
         // Input handling
         window.addEventListener('keydown', (e) => {
