@@ -21,17 +21,23 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    /* Fallback */
+    height: 100dvh;
+    width: 100vw;
 }
 
 #game-container {
     position: relative;
     width: 100%;
     height: 100%;
-    max-width: 480px; /* Mobile-first aspect ratio constraint */
-    max-height: 853px;
+    max-width: 600px;
+    /* Increased slightly for tablets */
+    /* Removed max-height to allow full vertical usage on tall phones */
     background: var(--dark-bg);
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     overflow: hidden;
+    touch-action: none;
+    /* Prevent scrolling/zooming on mobile */
 }
 
 canvas {
@@ -121,7 +127,7 @@ canvas {
     font-family: 'Cinzel', serif;
     font-size: 4rem;
     color: var(--text-light);
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 10;
 }
 

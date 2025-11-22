@@ -112,10 +112,12 @@ class Game {
 
     resize() {
         const container = document.getElementById('game-container');
-        this.canvas.width = container.clientWidth;
-        this.canvas.height = container.clientHeight;
-        this.width = this.canvas.width;
-        this.height = this.canvas.height;
+        if (container) {
+            this.canvas.width = container.clientWidth;
+            this.canvas.height = container.clientHeight;
+            this.width = this.canvas.width;
+            this.height = this.canvas.height;
+        }
     }
 
     start() {
