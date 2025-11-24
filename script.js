@@ -141,7 +141,7 @@ class Game {
         this.score = 0;
         document.getElementById('score-display').innerText = this.score;
         this.frames = 0;
-        this.speed = 3;
+        this.speed = 2.2;
         this.obstacles = [];
         this.particles = [];
 
@@ -152,8 +152,8 @@ class Game {
             width: 40,
             height: 56,
             velocity: 0,
-            gravity: 0.25,
-            jumpStrength: -5.5,
+            gravity: 0.2,
+            jumpStrength: -4.5,
             rotation: 0,
             rank: 'A',
             suit: '♥',
@@ -204,7 +204,7 @@ class Game {
                 this.audio.playScore();
                 this.changeCardSuit();
                 // Increase speed slightly
-                if (this.score % 5 === 0) this.speed += 0.2;
+                if (this.score % 5 === 0) this.speed += 0.1;
             }
 
             // Remove off-screen
@@ -215,8 +215,8 @@ class Game {
     }
 
     spawnObstacle() {
-        const gapHeight = 150;
-        const minHeight = 50;
+        const gapHeight = 170;
+        const minHeight = 80;
         const maxTopHeight = this.height - gapHeight - minHeight;
         const topHeight = Math.floor(Math.random() * (maxTopHeight - minHeight + 1)) + minHeight;
 
